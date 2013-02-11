@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  model_name: MyString
+  model_year: 1
+  description: MyString
+  activated: 1
+  hull: MyString
+  length_ft: 1
+  cabins: 1
+  berths: 1
+  heads: 1
+  max_persons: 1
+  fuel_capacity: 1
+  water_capacity: 1
+  permalink: MyString
+
+two:
+  name: MyString
+  model_name: MyString
+  model_year: 1
+  description: MyString
+  activated: 1
+  hull: MyString
+  length_ft: 1
+  cabins: 1
+  berths: 1
+  heads: 1
+  max_persons: 1
+  fuel_capacity: 1
+  water_capacity: 1
+  permalink: MyString

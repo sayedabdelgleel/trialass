@@ -1,0 +1,62 @@
+<h1>Listing boats</h1>
+
+<table >
+  <tr>
+    <th>Name</th>
+    <th>Model name</th>
+    <th>Model year</th>
+    <!-- <th>Description</th>
+    <th>Activated</th>
+    <th>Hull</th>
+    <th>Length ft</th>
+    <th>Cabins</th>
+    <th>Berths</th>
+    <th>Heads</th>
+    <th>Max persons</th>
+    <th>Fuel capacity</th>
+    <th>Water capacity</th>
+    <th>Permalink</th> -->
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @boats.each do |boat| %>
+  <tr>
+    <td><%= boat.name %></td>
+    <td><%= boat.model_name %></td>
+    <td><%= boat.model_year %></td>
+    <!-- <td><%= boat.description %></td>
+    <td><%= boat.activated %></td>
+    <td><%= boat.hull %></td>
+    <td><%= boat.length_ft %></td>
+    <td><%= boat.cabins %></td>
+    <td><%= boat.berths %></td>
+    <td><%= boat.heads %></td>
+    <td><%= boat.max_persons %></td>
+    <td><%= boat.fuel_capacity %></td>
+    <td><%= boat.water_capacity %></td>
+    <td><%= boat.permalink %></td> -->
+    <td><%= link_to 'Show', boat %></td>
+    <td><%= link_to 'Edit', edit_boat_path(boat) %></td>
+    <td><%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%if @offset > 0%>
+<%= link_to 'Previous', :controller=>"boats" ,:offset => (@offset - @limit) %>
+<%end%>
+<%if @len > @limit %>
+&nbsp;&nbsp;&nbsp;
+<%= @page%> / <%= (@len/(@limit+0.0)).ceil%>
+&nbsp;&nbsp;&nbsp;
+<%end%>
+<%if @offset+@limit < @len%>
+<%= link_to 'Next', :controller=>"boats"  ,:offset => (@offset+@limit) %>
+<%end%>
+<br />
+<br />
+
+<%= link_to 'New Boat', new_boat_path %>

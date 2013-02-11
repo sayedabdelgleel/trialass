@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  starting_price: 1
+  tagline: MyString
+  introduction: MyText
+  weather_months: MyString
+  weather_temperature: 1
+  weather_high: 1
+  weather_low: 1
+  activated: 1
+  permalink: MyString
+
+two:
+  name: MyString
+  starting_price: 1
+  tagline: MyString
+  introduction: MyText
+  weather_months: MyString
+  weather_temperature: 1
+  weather_high: 1
+  weather_low: 1
+  activated: 1
+  permalink: MyString

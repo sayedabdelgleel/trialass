@@ -1,0 +1,73 @@
+<%= form_for(@boat) do |f| %>
+  <% if @boat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boat.errors.count, "error") %> prohibited this boat from being saved:</h2>
+
+      <ul>
+      <% @boat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :model_name %><br />
+    <%= f.text_field :model_name %>
+  </div>
+  <div class="field">
+    <%= f.label :model_year %><br />
+    <%= f.number_field :model_year %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :activated %><br />
+    <%= f.number_field :activated %>
+  </div>
+  <div class="field">
+    <%= f.label :hull %><br />
+    <%= f.text_field :hull %>
+  </div>
+  <div class="field">
+    <%= f.label :length_ft %><br />
+    <%= f.number_field :length_ft %>
+  </div>
+  <div class="field">
+    <%= f.label :cabins %><br />
+    <%= f.number_field :cabins %>
+  </div>
+  <div class="field">
+    <%= f.label :berths %><br />
+    <%= f.number_field :berths %>
+  </div>
+  <div class="field">
+    <%= f.label :heads %><br />
+    <%= f.number_field :heads %>
+  </div>
+  <div class="field">
+    <%= f.label :max_persons %><br />
+    <%= f.number_field :max_persons %>
+  </div>
+  <div class="field">
+    <%= f.label :fuel_capacity %><br />
+    <%= f.number_field :fuel_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :water_capacity %><br />
+    <%= f.number_field :water_capacity %>
+  </div>
+ <!--  <div class="field">
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

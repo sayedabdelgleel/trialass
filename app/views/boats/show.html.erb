@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @boat.name %>
+</p>
+
+<p>
+  <b>Model name:</b>
+  <%= @boat.model_name %>
+</p>
+
+<p>
+  <b>Model year:</b>
+  <%= @boat.model_year %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @boat.description %>
+</p>
+
+<p>
+  <b>Activated:</b>
+  <%= @boat.activated %>
+</p>
+
+<p>
+  <b>Hull:</b>
+  <%= @boat.hull %>
+</p>
+
+<p>
+  <b>Length ft:</b>
+  <%= @boat.length_ft %>
+</p>
+
+<p>
+  <b>Cabins:</b>
+  <%= @boat.cabins %>
+</p>
+
+<p>
+  <b>Berths:</b>
+  <%= @boat.berths %>
+</p>
+
+<p>
+  <b>Heads:</b>
+  <%= @boat.heads %>
+</p>
+
+<p>
+  <b>Max persons:</b>
+  <%= @boat.max_persons %>
+</p>
+
+<p>
+  <b>Fuel capacity:</b>
+  <%= @boat.fuel_capacity %>
+</p>
+
+<p>
+  <b>Water capacity:</b>
+  <%= @boat.water_capacity %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%= @boat.permalink %>
+</p>
+
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>

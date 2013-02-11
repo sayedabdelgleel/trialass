@@ -1,0 +1,57 @@
+<%= form_for(@destination) do |f| %>
+  <% if @destination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@destination.errors.count, "error") %> prohibited this destination from being saved:</h2>
+
+      <ul>
+      <% @destination.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_price %><br />
+    <%= f.number_field :starting_price %>
+  </div>
+  <div class="field">
+    <%= f.label :tagline %><br />
+    <%= f.text_field :tagline %>
+  </div>
+  <div class="field">
+    <%= f.label :introduction %><br />
+    <%= f.text_area :introduction %>
+  </div>
+  <div class="field">
+    <%= f.label :weather_months %><br />
+    <%= f.text_field :weather_months %>
+  </div>
+  <div class="field">
+    <%= f.label :weather_temperature %><br />
+    <%= f.number_field :weather_temperature %>
+  </div>
+  <div class="field">
+    <%= f.label :weather_high %><br />
+    <%= f.number_field :weather_high %>
+  </div>
+  <div class="field">
+    <%= f.label :weather_low %><br />
+    <%= f.number_field :weather_low %>
+  </div>
+  <div class="field">
+    <%= f.label :activated %><br />
+    <%= f.number_field :activated %>
+  </div>
+  <!-- <div class="field">
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

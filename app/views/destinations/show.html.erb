@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @destination.name %>
+</p>
+
+<p>
+  <b>Starting price:</b>
+  <%= @destination.starting_price %>
+</p>
+
+<p>
+  <b>Tagline:</b>
+  <%= @destination.tagline %>
+</p>
+
+<p>
+  <b>Introduction:</b>
+  <%= @destination.introduction %>
+</p>
+
+<p>
+  <b>Weather months:</b>
+  <%= @destination.weather_months %>
+</p>
+
+<p>
+  <b>Weather temperature:</b>
+  <%= @destination.weather_temperature %>
+</p>
+
+<p>
+  <b>Weather high:</b>
+  <%= @destination.weather_high %>
+</p>
+
+<p>
+  <b>Weather low:</b>
+  <%= @destination.weather_low %>
+</p>
+
+<p>
+  <b>Activated:</b>
+  <%= @destination.activated %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%= @destination.permalink %>
+</p>
+
+
+<%= link_to 'Edit', edit_destination_path(@destination) %> |
+<%= link_to 'Back', destinations_path %>
